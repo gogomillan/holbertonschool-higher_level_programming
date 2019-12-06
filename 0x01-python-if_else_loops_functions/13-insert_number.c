@@ -20,7 +20,8 @@ listint_t *current, *prev, *new;
 	current = *head;
 	prev = current;
 	new->n = number;
-	if (current->n > number)
+
+	if (*head == NULL || current->n > number)
 	{
 		new->next = *head, *head = new;
 		return (new);
