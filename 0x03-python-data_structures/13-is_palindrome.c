@@ -7,7 +7,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-int *list;
+int list[1000000];
 long go = 1, i;
 listint_t *forw;
 
@@ -18,12 +18,6 @@ listint_t *forw;
 	if ((*head)->next == NULL)
 		return (1);
 
-	forw = *head;
-	while (forw->next != NULL)
-		forw = forw->next, go++;
-	list = malloc(go * sizeof(int));
-	if (!list)
-		return (0);
 	forw = *head, go = 0;
 	while (forw != NULL)
 		list[go] = forw->n, forw = forw->next, go++;
@@ -31,11 +25,8 @@ listint_t *forw;
 	for (i = 0; i < (go / 2); i++)
 	{
 		if (list[i] != list[go - i - 1])
-		{	free(list);
 			return (0);
-		}
 	}
-	free(list);
 
 	return (1);
 }
