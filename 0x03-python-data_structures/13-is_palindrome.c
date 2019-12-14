@@ -15,6 +15,8 @@ listint_t *forw;
 		return (1);
 	if (*head == NULL)
 		return (1);
+	if ((*head)->next == NULL)
+		return (1);
 
 	forw = *head;
 	while (forw->next != NULL)
