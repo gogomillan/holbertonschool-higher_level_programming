@@ -20,17 +20,20 @@ listint_t *forw;
 	while (forw->next != NULL)
 		forw = forw->next, go++;
 	list = malloc(go * sizeof(int));
-    if (!list)
+	if (!list)
 		return (0);
 	forw = *head, go = 0;
 	while (forw != NULL)
-        list[go] = forw->n, forw = forw->next, go++;
+		list[go] = forw->n, forw = forw->next, go++;
 
 	for (i = 0; i < (go / 2); i++)
 	{
 		if (list[i] != list[go - i - 1])
+		{	free(list);
 			return (0);
+		}
 	}
+	free(list);
 
 	return (1);
 }
