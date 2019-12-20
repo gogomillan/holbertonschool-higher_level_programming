@@ -3,7 +3,25 @@ class Square:
     """ This is a class to define a square.
     """
     def __init__(self, size=0):
-        """ This is constructr method.
+        """ This is constructor method.
+
+        Args:
+            size: size of the square.
+        """
+        self.__size = size
+
+    @property
+    def size(self):
+        """ This is the getter method.
+
+        Returns:
+            __size: size of the square.
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, size):
+        """ This is the setter method.
 
         Args:
             size: size of the square.
@@ -18,6 +36,6 @@ class Square:
         """ This method return the area of the square.
 
         Returns:
-            self.__area * self.__area: The are of the square.
+            self.__size * self.__size: The are of the square.
         """
         return self.__size * self.__size
