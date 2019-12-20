@@ -2,15 +2,15 @@
 def safe_print_list_integers(my_list=[], x=0):
     i = 0
     try:
-        for i in range(x):
+        for j in range(x):
             try:
-                print("{:d}".format(my_list[i]), end='')
+                print("{:d}".format(my_list[j]), end='')
+                i += 1
             except ValueError:
                 print('', end='')
+            except TypeError:
+                print('', end='')
         print()
-        if i > 0:
-            return i + 1
-        else:
-            return i
+        return i
     except IndexError:
         raise
