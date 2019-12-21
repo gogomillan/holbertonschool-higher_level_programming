@@ -80,11 +80,12 @@ class Square:
     def __str__(self):
         """ This method prints in stdout the square with the character #.
         """
-        if self.__size == 0:
-            return '\n'
-        values = []
-        for i in range(self.__position[1]):
-            values.append('\n')
+        if self.__size != 0:
+            for i in range(self.__position[1]):
+                print()
         for i in range(self.__size):
-            values.append(" " * self.__position[0] + "#" * self.__size)
-        return ('\n'.join(values))
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size, end="")
+            if i != self.__size - 1:
+                print()
+        return ""
