@@ -1,0 +1,124 @@
+===========================
+How to Use 0-add_integer.py
+===========================
+
+This module contains the add function for two integers. You can send float
+and this could be cast to integer in other case you will have an exception.
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Documentation
+=============
+
+    >>> module_doc = __import__("0-add_integer").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> func_doc = __import__("0-add_integer").add_integer.__doc__
+    >>> print(len(func_doc) > 0)
+    True
+
+Integers
+========
+
+``add_integer()`` will receive two arguments and then add them.
+::
+Adding two positive integers
+::
+    >>> add_integer(100, 98)
+    198
+
+Adding two negative integers
+::
+    >>> add_integer(-5, -5)
+    -10
+
+Adding negative and positive numbers
+
+    >>> add_integer(10, -5)
+    5
+
+    >>> add_integer(-5, 10)
+    5
+
+Validating the default for b
+::
+    >>> add_integer(2)
+    100
+
+Int limits
+::
+    >>> add_integer(2147483647, 0)
+    2147483647
+
+    >>> add_integer(-2147483648, 0)
+    -2147483648
+
+    >>> add_integer(2147483647, -2147483647)
+    0
+
+    >>> add_integer(-2147483648, 2147483647)
+    -1
+
+No arguments
+::
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Floats
+======
+``add_integer()`` must cast floats to integers before add
+
+Floating point numbers
+::
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(100.3, 100.3)
+    200
+
+    >>> add_integer(100.32, 100.32)
+    200
+
+TypeErrors
+==========
+If a or b are not numbers, a TypeError it is raised
+::
+    >>> add_integer(98, "Hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer("Holberton",98)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer([1, 2, 3], 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Infinity
+=========================
+Infinity value
+::
+    >>> add_integer(float('inf'), 98)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(98, float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+Not A Number
+=========================
+
+    >>> add_integer(float('NaN'), 98)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
