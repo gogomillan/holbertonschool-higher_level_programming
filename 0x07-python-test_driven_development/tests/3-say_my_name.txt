@@ -102,7 +102,7 @@ No strings
     ...
     TypeError: last_name must be a string
 
-Passing in None
+None as an argument
 ::
     >>> say_my_name(None)
     Traceback (most recent call last):
@@ -124,7 +124,7 @@ Passing in None
     ...
     TypeError: first_name must be a string
 
-Missing Arguments
+No arguments
 ::
     >>> say_my_name()
     Traceback (most recent call last):
