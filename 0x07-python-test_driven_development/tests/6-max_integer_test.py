@@ -1,134 +1,158 @@
-#!/usr/bin/python3
-""" Unittest for max_integer([..])
-"""
-import unittest
-max_integer = __import__("6-max_integer").max_integer
+==============================
+How to use 100-matrix_mul.py
+==============================
 
-class TestMaxInteger(unittest.TestCase):
-    """ Class for unittest of max_integer program
-    """
+The function multiplies 2 matrices:
 
-    def test_documentation(self):
-        self.assertTrue(len(__import__("6-max_integer").__doc__) > 0)
+    >>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[7, 10], [15, 22]]
 
-        self.assertTrue(len(max_integer.__doc__) > 0)
+Documentation
+=============
 
-    def test_positives(self):
-        """ Testing positive numbers
-        """
+    >>> module_doc = __import__("100-matrix_mul").__doc__
+    >>> print(len(module_doc) > 0)
+    True
 
-        test_list = [1, 2, 3, 4]
-        self.assertEqual(max_integer(test_list), 4)
+    >>> func_doc = __import__("100-matrix_mul").matrix_mul.__doc__
+    >>> print(len(func_doc) > 0)
+    True
 
-        test_list = [1, 2, 4, 3]
-        self.assertEqual(max_integer(test_list), 4)
+Basic multiplication
+==============
 
-        test_list = [4, 4, 4, 4]
-        self.assertEqual(max_integer(test_list), 4)
+If the factors are right
+::
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[7, 10], [15, 22]]
 
-        test_list = [1, 2, 4, 4]
-        self.assertEqual(max_integer(test_list), 4)
+    >>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13, 16]]
 
-        test_list = [1.1, 2.2, 3.3, 4.4]
-        self.assertEqual(max_integer(test_list), 4.4)
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
-        test_list = [4, 4.1, 4.12, 4.22]
-        self.assertEqual(max_integer(test_list), 4.22)
+Negative numbers
+::
+    >>> matrix_divided(matrix, -1)
+    [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
 
-        test_list = [1000, 1, 2, 3]
-        self.assertEqual(max_integer(test_list), 1000)
+Mixed Integers and Floats
+::
+    >>> matrix = [[1, 2.2, 3], [4, 5.5, 6]]
 
-        test_list = [1, 1000, 2, 3]
-        self.assertEqual(max_integer(test_list), 1000)
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.73, 1.0], [1.33, 1.83, 2.0]]
 
-        test_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-        self.assertEqual(max_integer(test_list), 15)
+Error Handling
+==============
 
-        test_list = [15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-        self.assertEqual(max_integer(test_list), 15)
+Exceptions control
 
-        test_list = [15]
-        self.assertEqual(max_integer(test_list), 15)
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
 
-        test_list = [[1, 2, 3, 4], [4, 3, 2, 1]]
-        self.assertEqual(max_integer(test_list), [4, 3, 2, 1])
+Dividing by zero
+::
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
 
-        test_list = (1, 2, 3, 4)
-        self.assertEqual(max_integer(test_list), 4)
+Divisor is not an integer or float
+::
+    >>> matrix_divided(matrix, "Hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
 
-        test_list = ((1, 2, 3, 4), (4, 3, 2, 1))
-        self.assertEqual(max_integer(test_list), (4, 3, 2, 1))
+    >>> matrix_divided(matrix, (1, 2, 3))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
 
-        test_list = ["Derek", "Kwok"]
-        self.assertEqual(max_integer(test_list), "Kwok")
+Some rows is not the same size
+::
+    >>> matrix = [[1, 2, 3], [4, 5]]
 
-    def test_negatives(self):
-        """ Testing negative numbers
-        """
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
 
-        test_list = [-2, 0, 2, 4]
-        self.assertEqual(max_integer(test_list), 4)
+    >>> matrix = [[1], [4, 5, 6]]
 
-        test_list = [-7, -6, -5, -4]
-        self.assertEqual(max_integer(test_list), -4)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
 
-        test_list = [-4.22, -4.12, -4.10, -4.08]
-        self.assertEqual(max_integer(test_list), -4.08)
+Matrix is not a list of lists of integers or floats
+::
+    >>> matrix = [[1, 2, "Hello"], [4, 5, 6]]
 
-    def test_none_and_zero(self):
-        """ Testing None and zeros
-        """
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        test_list = []
-        self.assertEqual(max_integer(test_list), None)
+    >>> matrix = [[1, 2, 3], ["Holberton", 5, 6]]
 
-        test_list = [0, 0, 0, 0]
-        self.assertEqual(max_integer(test_list), 0)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        self.assertEqual(max_integer(), None)
+    >>> matrix = [[1, 2, (1, 2, 3)], [4, 5, 6]]
 
-        test_list = {}
-        self.assertEqual(max_integer(test_list), None)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        test_list = ()
-        self.assertEqual(max_integer(test_list), None)
+    >>> matrix = [[1, 2, [1, 2, 3]], ["Holbies", 5, 6]]
 
-        self.assertEqual(max_integer(), None)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-    def test_not_list(self):
-        """ Testing incorrect data types
-        """
+    >>> matrix = ((1, 2, 3), (4, 5, 6))
 
-        test_list = [1, 2, "Derek", 4]
-        self.assertRaises(TypeError)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        test_list = [1, 2, [1, 2, 3], 4]
-        self.assertRaises(TypeError)
+    >>> matrix = [(1, 2, 3), [4, 5, 6]]
 
-        test_list = [1, 2, (1, 2, 3), 4]
-        self.assertRaises(TypeError)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        test_list = 5
-        self.assertRaises(TypeError)
+    >>> matrix = []
 
-        test_list = 5.5
-        self.assertRaises(TypeError)
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        test_list = (1, 2, 3, 4)
-        self.assertEqual(max_integer(test_list), 4)
+    >>> matrix = None
 
-        test_list = "Derek"
-        self.assertEqual(max_integer(test_list), 'r')
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-        test_list = 'D'
-        self.assertEqual(max_integer(test_list), 'D')
+Missing Arguments
+::
+    >>> matrix_divided(matrix)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
-        test_list = None
-        self.assertRaises(TypeError)
-
-        test_list = {1, 2, 3, 4}
-        self.assertRaises(TypeError)
-
-if __name__ == '__main__':
-    unittest.main()
-
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

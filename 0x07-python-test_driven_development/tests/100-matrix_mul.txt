@@ -1,0 +1,126 @@
+===========================
+How to use 2-matrix_mul.txt
+===========================
+
+The function matrix_mul(m_a, m_b) multiplies 2 matrices:
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[7, 10], [15, 22]]
+
+Documentation
+=============
+
+    >>> module_doc = __import__("100-matrix_mul").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> func_doc = __import__("100-matrix_mul").matrix_mul.__doc__
+    >>> print(len(func_doc) > 0)
+    True
+
+Basic Division
+==============
+
+Normal behavior
+::
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[7, 10], [15, 22]]
+
+    >>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13, 16]]
+
+    >>> print(matrix_mul([[1.5, 2.5], [3.1, 4.8]], [[1.2, 2.7], [3.3, 4.4]]))
+    [[10.05, 15.05], [19.56, 29.49]]
+
+    >>> print(matrix_mul([[1.5, 2.5], [3.1, 4.8]], [[1, 0], [0, 1]]))
+    [[1.5, 2.5], [3.1, 4.8]]
+
+    >>> print(matrix_mul([[1.5, 2.5], [3.1, 4.8]], [[0, 0], [0, 0]]))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+    >>> print(matrix_mul([[1.5, 2.5], [3.1, 4.8]], [[0, 1], [1, 0]]))
+    [[2.5, 1.5], [4.8, 3.1]]
+
+    >>> print(matrix_mul([[1.5, 2.5], [3.1, 4.8]], [[float('inf'), float('inf')], [1, 0]]))
+    [[inf, inf], [inf, inf]]
+
+    >>> print(matrix_mul([[-1, -2], [-3, -4]], [[-1, -2], [-3, -4]]))
+    [[7, 10], [15, 22]]
+
+    >>> print(matrix_mul([[-1, -2], [-3, -4]], [[1, 2], [3, 4]]))
+    [[-7, -10], [-15, -22]]
+
+    >>> print(matrix_mul([[-1, 2], [3, -4]], [[1, 2], [3, 4]]))
+    [[5, 6], [-9, -10]]
+
+    >>> print(matrix_mul([[1, 2], [3, 4], [5, 6]], [[1, 2], [3, 4]]))
+    [[7, 10], [15, 22], [23, 34]]
+
+Error handling
+==============
+
+Arguments must be a list
+::
+    >>> print(matrix_mul(1, 2))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+Arguments must be a list of lists
+::
+    >>> print(matrix_mul([1], [2]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list of lists
+
+Empty arguments
+::
+    >>> print(matrix_mul([], [[]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+    >>> print(matrix_mul([[]], []))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+    >>> print(matrix_mul([[]], [[1, 2]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+    >>> print(matrix_mul([[1, 2]], [[]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Error type argument
+::
+    >>> print(matrix_mul([[1, 2]], [["Hello", 3], [3, 4]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+
+    >>> print(matrix_mul([[1, 2]], [[2, 3], [3, ""]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+
+Matrix incorrect shape
+::
+    >>> print(matrix_mul([[1, 2], [3, 4, 5], [6, 7]], [[1, 2], [3, 4]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must be of the same size
+
+    >>> print(matrix_mul([[1, 2]], [[2, 3]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+
+    >>> print(matrix_mul([[1, 2, 3]], [[1, 2], [3, 4]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
