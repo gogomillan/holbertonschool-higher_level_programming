@@ -3,7 +3,7 @@
 """
 
 
-def lazy_matrix_mul(m_a, m_b):
+def lazy_matrix_mul(m_a=None, m_b=None):
     """function that multiplies  2 matrices by using the module NumPy:
 
     Args:
