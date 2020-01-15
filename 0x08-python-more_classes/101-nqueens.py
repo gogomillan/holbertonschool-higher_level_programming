@@ -15,7 +15,7 @@ for z in range(1, n - 1):
     for x in range(0, n):
         new_list[x] = [x, tstep - 1]
         tstep += step
-        if (tstep > n and n % 2 == 0): 
+        if (tstep > n and n % 2 == 0):
             tstep -= n + 1
         elif (tstep > n and n % 2 == 1):
             tstep -= n
