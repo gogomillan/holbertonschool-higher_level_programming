@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Module for a class Rectangle that defines a rectangle by: (based on
 4-rectangle.py)
 """
