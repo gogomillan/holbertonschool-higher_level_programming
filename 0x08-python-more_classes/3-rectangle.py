@@ -10,6 +10,8 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
         string = "{}".format('\n'.join(
                 ['#' * self.__width for row in range(0, self.__height)]))
         return string
