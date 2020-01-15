@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """Module for a class Rectangle that defines a rectangle by: (based on
-2-rectangle.py)
+3-rectangle.py)
 """
 
 
@@ -89,3 +89,11 @@ class Rectangle:
         """
         line = ["#" * self.__width] * self.__height
         return "\n".join(line)
+
+    def __repr__(self):
+        """Magic method to return a machine readable representation of a type.
+
+        Returns:
+            A representation of the type of the object
+        """
+        return "Rectangle("+str(self.__width)+", "+str(self.__height)+")"
