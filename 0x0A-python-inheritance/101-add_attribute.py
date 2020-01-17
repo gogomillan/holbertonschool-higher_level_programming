@@ -9,10 +9,11 @@ def add_attribute(obj, name, value):
     Function to set atributes in a object.
 
     Args:
+        obj (object): The object
         name (str): The name of the object
         value (object): The value of the object
     """
-    if str(type(obj)).find("__main__") != -1:
+    if str(type(obj)).find(".") != -1:
         setattr(obj, name, value)
     else:
         raise TypeError("can't add new attribute")
