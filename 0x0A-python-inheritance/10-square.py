@@ -14,7 +14,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """
         Contructor method for Square
-    
+
         Args:
             size (int): The size of the Square
         """
