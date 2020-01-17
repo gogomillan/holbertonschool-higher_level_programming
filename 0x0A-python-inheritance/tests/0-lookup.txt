@@ -1,0 +1,27 @@
+======================
+How to Use 0-lookup.py
+======================
+
+This module contains function lookup(obj) that returns the list of available
+attributes and methods of an object:
+
+    >>> lookup = __import__('0-lookup').lookup
+
+Documentation
+=============
+
+    >>> module_doc = __import__('0-lookup').__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> func_doc = __import__('0-lookup').lookup.__doc__
+    >>> print(len(func_doc) > 0)
+    True
+
+Basic
+=====
+
+    >>> class MyClass1(object): pass
+
+    >>> print(lookup(MyClass1))
+    ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
