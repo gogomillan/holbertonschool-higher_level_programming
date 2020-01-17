@@ -2,6 +2,8 @@
 """
 This module the Square class
 """
+
+
 Rectangle = __import__("9-rectangle").Rectangle
 
 
@@ -9,7 +11,6 @@ class Square(Rectangle):
     """
     Class Square
     """
-
     def __init__(self, size):
         """
         Contructor method for Square
