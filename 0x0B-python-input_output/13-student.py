@@ -30,7 +30,7 @@ class Student:
 
     def reload_from_json(self, json):
         """
-        Public method that replaces all attributes of the Student instance. 
+        Public method that replaces all attributes of the Student instance.
 
         Args:
             json: Info in JSON format
