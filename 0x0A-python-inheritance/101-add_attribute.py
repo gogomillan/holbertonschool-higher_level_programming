@@ -13,7 +13,7 @@ def add_attribute(obj, name, value):
         name (str): The name of the object
         value (object): The value of the object
     """
-    if str(type(obj)).find(".") != -1:
+    if hasattr(obj, '__dict__'):
         setattr(obj, name, value)
     else:
         raise TypeError("can't add new attribute")
