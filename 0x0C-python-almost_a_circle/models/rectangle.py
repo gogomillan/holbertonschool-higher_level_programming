@@ -108,7 +108,7 @@ class Rectangle(Base):
         """
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         """
         Setter method
@@ -137,3 +137,11 @@ class Rectangle(Base):
         """
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """
+        Method so that it returns [Rectangle] (<id>) <x>/<y> -
+        <width>/<height>
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                       self.width, self.height)
