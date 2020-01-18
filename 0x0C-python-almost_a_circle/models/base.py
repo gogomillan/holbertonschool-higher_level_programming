@@ -59,7 +59,7 @@ class Base:
     def from_json_string(json_string):
         """
         Return the deserialization of a JSON string.
-            
+
         Args:
             json_string (str): A JSON str representation of a list of dicts.
 
@@ -75,7 +75,7 @@ class Base:
     def create(cls, **dictionary):
         """
         Return a class instantied from a dictionary of attributes.
-            
+
         Args:
             **dictionary (dict): Key/value pairs of attributes to initialize.
         """
@@ -110,7 +110,7 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """
         Write the CSV serialization of a list of objects to a file.
-            
+
         Args:
             list_objs (list): A list of inherited Base instances.
         """
