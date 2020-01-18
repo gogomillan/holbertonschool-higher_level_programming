@@ -135,6 +135,8 @@ class Rectangle(Base):
         """
         Method that prints in stdout the Rectangle with the character #
         """
+        for i in range(self.__y):
+            print()
         for i in range(self.__height):
             print("#" * self.__width)
 
@@ -143,5 +145,5 @@ class Rectangle(Base):
         Method so that it returns [Rectangle] (<id>) <x>/<y> -
         <width>/<height>
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                                                       self.width, self.height)
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
+                self.x, self.y, self.width, self.height)
