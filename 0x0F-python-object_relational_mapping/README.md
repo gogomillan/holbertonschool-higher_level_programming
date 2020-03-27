@@ -30,6 +30,7 @@ A script that lists all states from the database hbtn_0e_0_usa:
 - Results are displayed as they are in the example below
 - The code is not executed when imported
 
+**Example**
 ```bash wrap
 guillaume@ubuntu:~/0x0F$ cat 0-select_states.sql
 -- Create states table in hbtn_0e_0_usa with some data
@@ -53,7 +54,7 @@ guillaume@ubuntu:~/0x0F$ ./0-select_states.py root root hbtn_0e_0_usa
 guillaume@ubuntu:~/0x0F$ 
 ```
 
-**Answer file:** [0-select_states.py]
+**Answer file:** [0-select_states.py]()
 
 ### 1. Filter states
 
