@@ -19,11 +19,11 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa",
         fltr_name (str): State name to find (filter)
     """
     conn = MySQLdb.connect(host="localhost", port=3306, user=db_user,
-                           passwd=db_passwd, db=db_name, charset="utf8")
+                           passwd=db_passwd, db=db_name)
     cur = conn.cursor()
     stmt = "SELECT * \
             FROM   states \
-            WHERE  name = '{}' \
+            WHERE BINARY name = '{}' \
             ORDER BY id ASC".format(fltr_name)
     cur.execute(stmt)
 
