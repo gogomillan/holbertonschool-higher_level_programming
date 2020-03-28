@@ -89,6 +89,36 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [1-filter_states.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/1-filter_states.py)
 
 ### 2. Filter states by user input
+Script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
+- The script takes 4 arguments: mysql username, mysql password, database name and state name searched
+- The module MySQLdb (import MySQLdb) is used
+- It is connected to a MySQL server running on localhost at port 3306
+- It is used format to create the SQL query with the user input
+- Results are sorted in ascending order by states.id
+- Results are displayed as they are in the example below
+- The code is not executed when imported
+
+**Example**
+```bash wrap
+guillaume@ubuntu:~/0x0F$ cat 0-select_states.sql
+-- Create states table in hbtn_0e_0_usa with some data
+CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;
+USE hbtn_0e_0_usa;
+CREATE TABLE IF NOT EXISTS states ( 
+    id INT NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(256) NOT NULL,
+    PRIMARY KEY (id)
+);
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+
+guillaume@ubuntu:~/0x0F$ cat 0-select_states.sql | mysql -uroot -p
+Enter password: 
+guillaume@ubuntu:~/0x0F$ ./2-my_filter_states.py root root hbtn_0e_0_usa 'Arizona'
+(2, 'Arizona')
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [2-my_filter_states.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/2-my_filter_states.py)
 
 ### 3. SQL Injection...
 
