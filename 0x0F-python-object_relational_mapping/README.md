@@ -23,9 +23,9 @@ In the second part, the module SQLAlchemy (dont ask me how to pronounce it) an O
 
 ### 0. Get all states
 A script that lists all states from the database hbtn_0e_0_usa:
-- The script take 3 arguments: mysql username, mysql password and database name (no argument validation needed)
-- It is used the module MySQLdb (import MySQLdb)
-- Is is connected to a MySQL server running on localhost at port 3306
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module MySQLdb (import MySQLdb) is used
+- It is connected to a MySQL server running on localhost at port 3306
 - Results are sorted in ascending order by states.id
 - Results are displayed as they are in the example below
 - The code is not executed when imported
@@ -57,6 +57,36 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [0-select_states.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/0-select_states.py)
 
 ### 1. Filter states
+Script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa:
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module MySQLdb (import MySQLdb) is used
+- It is connected to a MySQL server running on localhost at port 3306
+- Results are sorted in ascending order by states.id
+- Results are displayed as they are in the example below
+- The code is not executed when imported
+
+**Example**
+```bash wrap
+guillaume@ubuntu:~/0x0F$ cat 0-select_states.sql
+-- Create states table in hbtn_0e_0_usa with some data
+CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;
+USE hbtn_0e_0_usa;
+CREATE TABLE IF NOT EXISTS states ( 
+    id INT NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(256) NOT NULL,
+    PRIMARY KEY (id)
+);
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+
+guillaume@ubuntu:~/0x0F$ cat 0-select_states.sql | mysql -uroot -p
+Enter password: 
+guillaume@ubuntu:~/0x0F$ ./1-filter_states.py root root hbtn_0e_0_usa
+(4, 'New York')
+(5, 'Nevada')
+guillaume@ubuntu:~/0x0F$
+```
+
+**Answer file:** [1-filter_states.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/1-filter_states.py)
 
 ### 2. Filter states by user input
 
