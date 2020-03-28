@@ -54,7 +54,7 @@ guillaume@ubuntu:~/0x0F$ ./0-select_states.py root root hbtn_0e_0_usa
 guillaume@ubuntu:~/0x0F$ 
 ```
 
-**Answer file:** [0-select_states.py]()
+**Answer file:** [0-select_states.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/0-select_states.py)
 
 ### 1. Filter states
 
