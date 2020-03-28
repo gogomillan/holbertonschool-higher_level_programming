@@ -218,7 +218,7 @@ guillaume@ubuntu:~/0x0F$ ./4-cities_by_state.py root root hbtn_0e_4_usa
 guillaume@ubuntu:~/0x0F$
 ```
 
-**Answer file:** [4-cities_by_state.py]()
+**Answer file:** [4-cities_by_state.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/4-cities_by_state.py)
 
 ### 5. All cities by state
 
