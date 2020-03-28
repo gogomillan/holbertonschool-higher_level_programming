@@ -13,7 +13,6 @@ import sys
 
 
 if __name__ == "__main__":
-
     if len(sys.argv) < 4:
         print("Usage: {} username password database_name".format(sys.argv[0]))
         exit(1)
@@ -23,7 +22,7 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
 
     conn = MySQLdb.connect(host="localhost", port=3306, user=db_user,
-                           passwd=db_passwd, db=db_name, charset="utf8")
+                           passwd=db_passwd, db=db_name)
     cur = conn.cursor()
     cur.execute("SELECT * \
                  FROM   states \
