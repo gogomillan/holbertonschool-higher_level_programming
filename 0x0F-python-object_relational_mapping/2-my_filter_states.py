@@ -38,7 +38,7 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 5:
-        print("Usage: {} username password database_name state_name".format(sys.argv[0]))
+        print("Usage: {} username password db_name state_name".format(sys.argv[0]))
         exit(1)
 
     main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
