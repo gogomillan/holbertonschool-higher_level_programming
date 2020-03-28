@@ -22,9 +22,9 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa",
                            passwd=db_passwd, db=db_name)
     cur = conn.cursor()
     stmt = "SELECT * \
-            FROM   `states` \
-            WHERE UPPER(`name`) = UPPER('{}') \
-            ORDER BY `id` ASC".format(fltr_name)
+            FROM   states \
+            WHERE BINARY name = '{}' \
+            ORDER BY id ASC".format(fltr_name)
     cur.execute(stmt)
 
     query_rows = cur.fetchall()
