@@ -2,20 +2,26 @@
 """
 Script that lists all states with a name starting with N (upper N) from the
 database hbtn_0e_0_usa:
+
+Args:
+    db_user (str): Database user name
+    db_passwd (str): Database user password
+    db_name (str): Database user password
 """
-
 import MySQLdb
+import sys
 
 
-def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa"):
-    """
-    Function lists states from the database hbtn_0e_0_usa filtered
+if __name__ == "__main__":
 
-    Args:
-        db_user (str): Database user name
-        db_passwd (str): Database user password
-        db_name (str): Database user password
-    """
+    if len(sys.argv) < 4:
+        print("Usage: {} username password database_name".format(sys.argv[0]))
+        exit(1)
+
+    db_user = sys.argv[1]
+    db_passwd = sys.argv[2]
+    db_name = sys.argv[3]
+
     conn = MySQLdb.connect(host="localhost", port=3306, user=db_user,
                            passwd=db_passwd, db=db_name, charset="utf8")
     cur = conn.cursor()
@@ -30,12 +36,3 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa"):
 
     cur.close()
     conn.close()
-
-if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) < 4:
-        print("Usage: {} username password database_name".format(sys.argv[0]))
-        exit(1)
-
-    main(sys.argv[1], sys.argv[2], sys.argv[3])
