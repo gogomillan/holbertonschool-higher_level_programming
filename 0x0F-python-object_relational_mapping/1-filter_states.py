@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that lists all states from the database hbtn_0e_0_usa:
+Script that lists all states with a name starting with N (upper N) from the
+database hbtn_0e_0_usa:
 """
 
 import MySQLdb
@@ -8,7 +9,7 @@ import MySQLdb
 
 def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa"):
     """
-    Function lists all states from the database hbtn_0e_0_usa
+    Function lists states from the database hbtn_0e_0_usa filtered
 
     Args:
         db_user (str): Database user name
@@ -19,7 +20,8 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa"):
                            passwd=db_passwd, db=db_name, charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * \
-                 FROM states \
+                 FROM   states \
+                 WHERE  name LIKE 'N%' \
                  ORDER BY id ASC")
 
     query_rows = cur.fetchall()
