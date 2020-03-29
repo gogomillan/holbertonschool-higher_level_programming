@@ -338,6 +338,24 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [7-model_state_fetch_all.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/7-model_state_fetch_all.py)
 
 ### 8. First state
+Python module that prints the first State object from the database hbtn_0e_6_usa:
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module SQLAlchemy is used
+- It is imported State and Base from model_state
+- It is connected to a MySQL server running on localhost at port 3306
+- Results are sorted in ascending order by states.id
+- The results are displayed as they are in the example below
+- If the table states is empty, print Nothing followed by a new line
+- The code is not executed when imported
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ ./8-model_state_fetch_first.py root root hbtn_0e_6_usa
+1: California
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [8-model_state_fetch_first.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/8-model_state_fetch_first.py)
 
 ### 9. Contains `a` 
 
