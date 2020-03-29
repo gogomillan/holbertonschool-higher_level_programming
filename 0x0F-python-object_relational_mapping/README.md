@@ -366,6 +366,7 @@ Python module that lists all State objects that contain the letter a from the da
 - Results are sorted in ascending order by states.id
 - The results are displayed as they are in the example below
 - The code is not executed when imported
+
 **Example**
 ```
 guillaume@ubuntu:~/0x0F$ ./9-model_state_filter_a.py root root hbtn_0e_6_usa
