@@ -380,6 +380,26 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [9-model_state_filter_a.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/9-model_state_filter_a.py)
 
 ### 10. Get a state
+Python module that prints the State object with the name passed as argument from the database hbtn_0e_6_usa:
+- The script takes 4 arguments: mysql username, mysql password, database name and state name to search (SQL injection free)
+- The module SQLAlchemy is used
+- It is imported State and Base from model_state
+- It is connected to a MySQL server running on localhost at port 3306
+- It is assumed there is one record with the state name to search
+- Results are sorted in ascending order by states.id
+- If no state has the name you searched for, display Not found
+- The code is not executed when imported
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Texas
+3
+guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Illinois
+Not found
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [10-model_state_my_get.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/10-model_state_my_get.py)
 
 ### 11. Add a new state
 
