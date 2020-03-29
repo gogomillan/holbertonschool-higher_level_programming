@@ -427,6 +427,28 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [11-model_state_insert.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/11-model_state_insert.py)
 
 ### 12. Update a state
+Python module that changes the name of a State object from the database hbtn_0e_6_usa:
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module SQLAlchemy is used
+- It is imported State and Base from model_state
+- It is connected to a MySQL server running on localhost at port 3306
+- The name of the State is changed where id = 2 to New Mexic
+- The code is not executed when imported
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ ./12-model_state_update_id_2.py root root hbtn_0e_6_usa 
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+1: California
+2: New Mexico
+3: Texas
+4: New York
+5: Nevada
+6: Louisiana
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [12-model_state_update_id_2.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/12-model_state_update_id_2.py)
 
 ### 13. Delete states
 
