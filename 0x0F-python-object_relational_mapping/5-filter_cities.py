@@ -21,15 +21,15 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa",
     conn = MySQLdb.connect(host="localhost", port=3306, user=db_user,
                            passwd=db_passwd, db=db_name, charset="utf8")
     cur = conn.cursor()
-    stmt = "SELECT c.name \
+    stmt = "SELECT DISTINCT c.id, c.name \
             FROM   states s, cities c \
             WHERE  s.name = %(par_name)s \
               AND  c.state_id = s.id \
-            ORDER BY c.name DESC"
+            ORDER BY c.id ASC"
     cur.execute(stmt, {'par_name': fltr_name})
 
     query_rows = cur.fetchall()
-    print(", ".join([row[0] for row in query_rows]))
+    print(", ".join([row[1] for row in query_rows]))
 
     cur.close()
     conn.close()
