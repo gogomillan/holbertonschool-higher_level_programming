@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that lists all State objects from the database hbtn_0e_6_usa
+Module that prints the first State object from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -19,8 +19,11 @@ def main():
 
     session = Session(engine)
 
-    for state in session.query(State).order_by(State.id).all():
+    state = session.query(State).order_by(State.id).first()
+    if state is not None:
         print("{}: {}".format(state.id, state.name))
+    else:
+        print("Nothing")
 
     session.close()
 
