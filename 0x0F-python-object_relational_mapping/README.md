@@ -309,6 +309,33 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [model_state.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/model_state.py)
 
 ### 7. All states via SQLAlchemy
+Python module that lists all State objects from the database hbtn_0e_6_usa
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module SQLAlchemy is used
+- It is imported State and Base from model_state
+- It is connected to a MySQL server running on localhost at port 3306
+- Results are sorted in ascending order by states.id
+- The results are displayed as they are in the example below
+- The code is not executed when imported
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ cat 7-model_state_fetch_all.sql
+-- Insert states
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+
+guillaume@ubuntu:~/0x0F$ cat 7-model_state_fetch_all.sql | mysql -uroot -p hbtn_0e_6_usa
+Enter password: 
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa
+1: California
+2: Arizona
+3: Texas
+4: New York
+5: Nevada
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [7-model_state_fetch_all.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/7-model_state_fetch_all.py)
 
 ### 8. First state
 
