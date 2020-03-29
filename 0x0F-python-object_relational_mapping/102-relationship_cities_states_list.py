@@ -22,10 +22,8 @@ def main():
     Base.metadata.create_all(engine)
     session = Session(engine)
 
-    for state in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
-        for city in state.cities:
-            print("    {}: {}".format(city.id, city.name))
+    for city in session.query(City).order_by(City.id).all():
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
 
     session.close()
     warnings.simplefilter('always', Warning)
