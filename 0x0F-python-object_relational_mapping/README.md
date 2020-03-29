@@ -402,6 +402,29 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [10-model_state_my_get.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/10-model_state_my_get.py)
 
 ### 11. Add a new state
+Python module that adds the State object Louisiana to the database hbtn_0e_6_usa:
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module SQLAlchemy is used
+- It is imported State and Base from model_state
+- It is connected to a MySQL server running on localhost at port 3306
+- The new states.id is printed after creation
+- The code is not executed when imported
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ ./11-model_state_insert.py root root hbtn_0e_6_usa 
+6
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+1: California
+2: Arizona
+3: Texas
+4: New York
+5: Nevada
+6: Louisiana
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [11-model_state_insert.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/11-model_state_insert.py)
 
 ### 12. Update a state
 
