@@ -451,6 +451,23 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [12-model_state_update_id_2.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/12-model_state_update_id_2.py)
 
 ### 13. Delete states
+Python module that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa:
+- The script takes 3 arguments: mysql username, mysql password and database name
+- The module SQLAlchemy is used
+- It is imported State and Base from model_state
+- It is connected to a MySQL server running on localhost at port 3306
+- The code is not executed when imported
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ ./13-model_state_delete_a.py root root hbtn_0e_6_usa 
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+2: New Mexico
+4: New York
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [13-model_state_delete_a.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/13-model_state_delete_a.py)
 
 ### 14. Cities in state
 
