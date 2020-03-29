@@ -265,6 +265,48 @@ guillaume@ubuntu:~/0x0F$
 **Answer file:** [5-filter_cities.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/5-filter_cities.py)
 
 ### 6. First state model
+Python module that contains the class definition of a State and an instance of Base = declarative_base():
+- State class:
+  - inherits from Base Tips
+  - links to the MySQL table states
+  - class attribute id that represents a column of an auto-generated, unique integer, cant be null and is a primary key
+  - class attribute name that represents a column of a string with maximum 128 characters and cant be null
+- The module SQLAlchemy is used
+- The MySQL server runs on localhost at port 3306
+
+**Example**
+```
+guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql
+-- Create database hbtn_0e_6_usa
+CREATE DATABASE IF NOT EXISTS hbtn_0e_6_usa;
+USE hbtn_0e_6_usa;
+SHOW CREATE TABLE states;
+
+guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql | mysql -uroot -p
+Enter password: 
+ERROR 1146 (42S02) at line 4: Table 'hbtn_0e_6_usa.states' doesn't exist
+guillaume@ubuntu:~/0x0F$ cat 6-model_state.py
+#!/usr/bin/python3
+"""Start link class to table in database 
+"""
+import sys
+from model_state import Base, State
+
+from sqlalchemy import (create_engine)
+
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+
+guillaume@ubuntu:~/0x0F$ ./6-model_state.py root root hbtn_0e_6_usa
+guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql | mysql -uroot -p
+Enter password: 
+Table   Create Table
+states  CREATE TABLE `states` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(128) NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=latin1
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**Answer file:** [model_state.py](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x0F-python-object_relational_mapping/model_state.py)
 
 ### 7. All states via SQLAlchemy
 
