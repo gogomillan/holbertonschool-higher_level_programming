@@ -25,23 +25,24 @@ def find_peak(list_of_integers):
         Decide peak left edge
         Decide peak right edge
         Decide the peak against its neighbors
+    """
     peak = 0
     for i in range(len(lof)):
         if i == 0 and lof[i] > lof[i + 1]:
             peak = lof[i] if lof[i] > peak else peak
         elif i == len(lof) - 1 and lof[i] > lof[i - 1]:
             peak = lof[i] if lof[i] > peak else peak
-        elif (i == 0 or lof[i] >= lof[i - 1]) and (i == len(lof) - 1 or lof[i] >= lof[i + 1]):
+        elif (i == 0 or lof[i] >= lof[i - 1]) \
+                and \
+             (i == len(lof) - 1 or lof[i] >= lof[i + 1]):
             peak = lof[i] if lof[i] > peak else peak
 
     return peak
-    """
 
     """ Binary Searcha
         - Decides the middle element
         - elif lower half call
         - else higher half call
-    """
     mid = len(lof) // 2
     print("{}, ".format(lof[mid]), end="")
     if (mid == 0 or lof[mid - 1] <= lof[mid]) \
@@ -51,3 +52,4 @@ def find_peak(list_of_integers):
         return(find_peak(lof[0:mid - 1]))
     else:
         return(find_peak(lof[mid:len(lof)]))
+    """
