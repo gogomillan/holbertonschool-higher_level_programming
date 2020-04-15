@@ -20,5 +20,5 @@ if __name__ == "__main__":
         """
         r_dict = dict([e.split("|||") for e in r.text.strip("{}\n").
                        replace('":"', '"|||"').replace('":', '"|||').
-                       replace('"','').split(",")])
+                       replace('"', '').split(",")])
         print("{id}".format(**r_dict))
