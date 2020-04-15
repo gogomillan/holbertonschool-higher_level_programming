@@ -16,7 +16,7 @@ if __name__ == "__main__":
     payload = {"q": q}
 
     r = requests.post(url, data=payload)
-    if r.text == "{}\n":
+    if r.text == "{}\n" or r.text == "{}" or r.text == "" or r.text is None:
         print("No result")
     else:
         r_dict = dict([e.split(":") for e in
