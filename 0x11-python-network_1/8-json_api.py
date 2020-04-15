@@ -16,9 +16,15 @@ if __name__ == "__main__":
     payload = {"q": q}
 
     r = requests.post(url, data=payload)
-    if r.text == "{}\n" or r.text == "{}" or r.text == "" or r.text is None:
-        print("No result")
+    try:
+        valid = r.json()
+    except ValueError:
+        print("Not a valid JSON")
     else:
-        r_dict = dict([e.split(":") for e in
-                       r.text.strip("{}\n").replace('"', '').split(",")])
-        print("[{id}] {name}".format(**r_dict))
+        if r.text == "{}\n" or r.text == "{}" or \
+           r.text == "" or r.text is None:
+            print("No result")
+        else:
+            r_dict = dict([e.split(":") for e in
+                           r.text.strip("{}\n").replace('"', '').split(",")])
+            print("[{id}] {name}".format(**r_dict))
