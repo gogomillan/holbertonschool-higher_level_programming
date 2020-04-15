@@ -15,8 +15,8 @@ if __name__ == "__main__":
     if url is not None:
         req = urllib.request.Request(url)
         try:
-            response = urllib.request.urlopen(req)
-            the_page = response.read()
-            print(the_page.decode('utf-8'))
+            with urllib.request.urlopen(req) as response:
+                the_page = response.read()
+                print(the_page.decode('utf-8'))
         except urllib.error.HTTPError as e:
             print("Error code: {}".format(e.code))
