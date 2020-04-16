@@ -20,11 +20,12 @@ if __name__ == "__main__":
     """ Using the token preparing parameters to get the tweets
     """
     auth = {'Authorization': 'Bearer ' + token.json().get('access_token')}
-    payload = {'q': sys.argv[3], 'result_type': 'recent', 'count': '6'}
+    payload = {'q': sys.argv[3], 'count': '5'}
     url = "https://api.twitter.com/1.1/search/tweets.json"
     token = requests.get(url, params=payload, headers=auth)
 
     """ Printing the tweets
     """
     for val in token.json().get("statuses"):
-        print("[{id_str}] {text}".format(**val))
+        print("[{}] {} by {}".format(val.get('id_str'), val.get('text'),
+                                     val.get('user').get('name')))
