@@ -14,10 +14,10 @@ request(url, function (error, response, body) {
     console.log(error);
   } else {
     for (const user of JSON.parse(body)) {
-      if (!users[parseInt(user.userId, 10) - 1]) {
-        users[parseInt(user.userId, 10) - 1] = 0;
+      if (!users[parseInt(user.userId, 10)]) {
+        users[parseInt(user.userId, 10)] = 0;
       }
-      users[parseInt(user.userId, 10) - 1] += 1;
+      users[parseInt(user.userId, 10)] += 1;
     }
     console.log(users);
   }
