@@ -15,9 +15,9 @@ request(url, function (error, response, body) {
   }
   for (const each of JSON.parse(body).characters) {
     request(each, function (err, resp, bd) {
-    if (err) {
-      console.log(err);
-    }
+      if (err) {
+        console.log(err);
+      }
       console.log(JSON.parse(bd).name);
     });
   }
