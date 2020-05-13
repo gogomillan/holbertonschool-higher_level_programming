@@ -19,6 +19,6 @@ request(url, function (error, response, body) {
       }
       users[parseInt(user.userId, 10) - 1] += 1;
     }
-    console.log(JSON.stringify(users));
+    console.log(users);
   }
 });
