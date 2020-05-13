@@ -12,13 +12,12 @@ const users = {};
 request(url, function (error, response, body) {
   if (error) {
     console.log(error);
-  } else {
-    for (const user of JSON.parse(body)) {
-      if (!users[parseInt(user.userId, 10)]) {
-        users[parseInt(user.userId, 10)] = 0;
-      }
-      users[parseInt(user.userId, 10)] += 1;
-    }
-    console.log(users);
   }
+  for (const user of JSON.parse(body)) {
+    if (!users[parseInt(user.userId, 10)]) {
+      users[parseInt(user.userId, 10)] = 0;
+    }
+    users[parseInt(user.userId, 10)] += 1;
+  }
+  console.log(users);
 });
