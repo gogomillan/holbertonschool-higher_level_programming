@@ -14,7 +14,7 @@ request(url, function (error, response, body) {
     console.log(error);
   }
   for (const user of JSON.parse(body)) {
-    if (user.completed == true) {
+    if (user.completed === true) {
       if (!users[parseInt(user.userId, 10)]) {
         users[parseInt(user.userId, 10)] = 0;
       }
