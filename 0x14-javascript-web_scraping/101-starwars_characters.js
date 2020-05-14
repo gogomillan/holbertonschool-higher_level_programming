@@ -4,33 +4,34 @@
   - The first argument is the movie ID
   - It is used the Star wars API with the endpoint
     https://swapi-api.hbtn.io/api/films/:id
+  - Display one character name by line in the same order of the list characters
+    in the /films/ response
   - It is used the module request
  */
 const request = require('request');
 const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
-function listOrderedCharacters (url) {
-  request(url, function (error, response, body) {
-    if (error) {
-      console.log(error);
-    } else {
-      const charDict = {};
-      const charList = JSON.parse(body).characters;
-      for (let i = 0; i < charList.length; i++) {
-        request(charList[i], function (error, response, body) {
-          if (error) {
-            console.log(error);
-          } else {
-            charDict[i] = JSON.parse(body).name;
-          }
-          if (charList.length === Object.keys(charDict).length) {
-            for (let k = 0; k < Object.keys(charDict).length; k++) {
-              console.log(charDict[k]);
-            }
-          }
-        });
+function getCharacter (theUrl) {
+  return new Promise((resolve, reject) => {
+    request(theUrl, function (error, resp, body) {
+      if (error) {
+        reject(error);
       }
-    }
+      resolve(body);
+    });
   });
 }
-listOrderedCharacters(url);
+
+request(url, async function (error, response, body) {
+  if (error) {
+    console.log(error);
+  }
+  for (const each of JSON.parse(body).characters) {
+    try {
+      const character = await getCharacter(each);
+      console.log(JSON.parse(character).name);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+});
