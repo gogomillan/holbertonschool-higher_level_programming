@@ -28,7 +28,7 @@ Javascript is used for many things. At Holberton School, you will use Javascript
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 ```
-![jQuery](/assets/1f1ihd.jpg)
+![jQuery](https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x15-javascript-web_jquery/assets/1f1ihd.jpg)
 
 ### semi-standard
 [Semistandard](https://intranet.hbtn.io/rltoken/FuXjfOYe18hUXCDoyMxBSg)
