@@ -40,6 +40,7 @@ Javascript is used for many things. At Holberton School, you will use Javascript
 [Click here to show it ...](https://htmlpreview.github.io/?https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x15-javascript-web_jquery/0-main.html)
 
 ### 1. With jQuery
+[Click here to show it ...](https://htmlpreview.github.io/?https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x15-javascript-web_jquery/1-main.html)
 
 ### 2. Click and turn red
 
