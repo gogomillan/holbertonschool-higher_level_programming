@@ -58,7 +58,7 @@ interested in.
 
 ## Challenges
 
-#### 0. No jQuery [(0-main.html)](0-main.html) | [(0-script.js)](0-script.js)
+#### 0. No jQuery [(0-main.html](0-main.html), [0-script.js)](0-script.js)
 
 #### 1. With jQuery
 
