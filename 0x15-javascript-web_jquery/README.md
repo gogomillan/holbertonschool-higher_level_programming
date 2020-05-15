@@ -34,13 +34,23 @@ Javascript is used for many things. At Holberton School, you will use Javascript
 ### semi-standard
 [Semistandard](https://intranet.hbtn.io/rltoken/FuXjfOYe18hUXCDoyMxBSg)
 
+## Installation
+
+### Using the git utility:
+```bash wrap
+git clone https://github.com/gogomillan/holbertonschool-higher_level_programming.git
+cd holbertonschool-higher_level_programming
+cd 0x15-javascript-web_jquery
+```
+
+### Using the browser:
+Open the index.html file
+
 ## Challenges
 
 ### 0. No jQuery
-[Click here to show it ...](https://htmlpreview.github.io/?https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x15-javascript-web_jquery/0-main.html)
 
 ### 1. With jQuery
-[Click here to show it ...](https://htmlpreview.github.io/?https://github.com/gogomillan/holbertonschool-higher_level_programming/blob/master/0x15-javascript-web_jquery/1-main.html)
 
 ### 2. Click and turn red
 
