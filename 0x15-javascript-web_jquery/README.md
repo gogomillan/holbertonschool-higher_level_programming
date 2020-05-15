@@ -62,30 +62,43 @@ interested in.
 Files ([0-main.html](0-main.html), [0-script.js](0-script.js))
 
 #### 1. With jQuery
+Files ([1-main.html](1-main.html), [1-script.js](1-script.js))
 
 #### 2. Click and turn red
+Files ([2-main.html](2-main.html), [2-script.js](2-script.js))
 
 #### 3. Add `.red` class
+Files ([3-main.html](3-main.html), [3-script.js](3-script.js))
 
 #### 4. Toggle classes
+Files ([4-main.html](4-main.html), [4-script.js](4-script.js))
 
 #### 5. List of elements
+Files ([5-main.html](5-main.html), [5-script.js](5-script.js))
 
 #### 6. Change the text
+Files ([6-main.html](6-main.html), [6-script.js](6-script.js))
 
 #### 7. Star wars character
+Files ([7-main.html](7-main.html), [7-script.js](7-script.js))
 
 #### 8. Star Wars movies
+Files ([8-main.html](8-main.html), [8-script.js](8-script.js))
 
 #### 9. Say Hello!
+Files ([9-main.html](9-main.html), [9-script.js](9-script.js))
 
 #### 10. No jQuery - document loaded
+Files ([100-main.html](100-main.html), [100-script.js](100-script.js))
 
 #### 11. List, add, remove
+Files ([101-main.html](101-main.html), [101-script.js](101-script.js))
 
 #### 12. Say hello to everybody! 
+Files ([102-main.html](102-main.html), [102-script.js](102-script.js))
 
 #### 13. And press ENTER
+Files ([103-main.html](103-main.html), [103-script.js](103-script.js))
 
 ## Author
 Gonzalo Gomez Millan | :octocat: [GitHub](https://github.com/gogomillan)
