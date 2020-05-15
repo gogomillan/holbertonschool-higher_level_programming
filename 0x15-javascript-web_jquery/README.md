@@ -29,7 +29,7 @@ Javascript is used for many things. At Holberton School, you will use Javascript
 </head>
 ```
 
-![jQuery](/assets/1f1ihd.jpg)
+![jQuery](assets/1f1ihd.jpg)
 
 #### semi-standard
 [Semistandard](https://intranet.hbtn.io/rltoken/FuXjfOYe18hUXCDoyMxBSg)
