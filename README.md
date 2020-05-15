@@ -23,3 +23,9 @@
 * 0x13-javascriptobjects_scopes_closures [...](/0x13-javascript_objects_scopes_closures)
 * 0x14-javascript-webscraping [...](/0x14-javascript-web_scraping)
 * 0x15-javascript-webjquery [...](/0x15-javascript-web_jquery)
+
+## Author
+Gonzalo Gomez Millan | :octocat: [GitHub](https://github.com/gogomillan)
+
+## License
+MIT
