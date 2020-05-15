@@ -52,8 +52,9 @@ Now you can see the `index.html` file and the other `.html` files
 * Now you can see the `index.html` file and the other `.html` files
 
 ### Using the browser:
-According to the previous steps either using git or using ZIP use then a
-browser to see the `index.html` file or each `.html` file your are interested in.
+According to the previous steps either using git or using ZIP, it is necessary
+to use then a browser to see the `index.html` file or each `.html` file you are
+interested in.
 
 ## Challenges
 
