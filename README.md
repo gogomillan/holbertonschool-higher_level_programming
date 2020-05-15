@@ -28,4 +28,4 @@
 Gonzalo Gomez Millan | :octocat: [GitHub](https://github.com/gogomillan)
 
 ## License
-MIT
+MIT [Go to ...](/LICENSE.md)
