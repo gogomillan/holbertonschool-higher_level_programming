@@ -36,7 +36,7 @@ Javascript is used for many things. At Holberton School, you will use Javascript
 
 ## Installation
 
-### Using the git utility:
+### Alternative 1 to deploy: using the git utility
 Clone the repo in your directory structure:
 ```bash wrap
 vagrant@ubuntu:~$ git clone https://github.com/gogomillan/holbertonschool-higher_level_programming.git
@@ -45,13 +45,13 @@ vagrant@ubuntu:~$ cd 0x15-javascript-web_jquery
 ```
 Now you can see the `index.html` file and the other `.html` files
 
-### Using a ZIP file:
+### Alternative 2 to deploy: using a ZIP file
 * Download it from this url: `https://github.com/gogomillan/holbertonschool-higher_level_programming/archive/master.zip`
 * Uncompress the file
 * Go into the `holbertonschool-higher_level_programming/0x15-javascript-web_jquery` directory
 * Now you can see the `index.html` file and the other `.html` files
 
-### Using the browser:
+### After deploy always using the browser:
 According to the previous steps either using git or using ZIP, it is necessary
 to use then a browser to see the `index.html` file or each `.html` file you are
 interested in.
