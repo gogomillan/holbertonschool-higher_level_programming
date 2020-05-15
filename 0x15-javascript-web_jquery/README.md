@@ -22,7 +22,7 @@ Javascript is used for many things. At Holberton School, you will use Javascript
 
 ## More info
 
-### Import jQuery
+#### Import jQuery
 ```bash wrap
 <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -31,42 +31,48 @@ Javascript is used for many things. At Holberton School, you will use Javascript
 
 ![jQuery](/assets/1f1ihd.jpg)
 
-### semi-standard
+#### semi-standard
 [Semistandard](https://intranet.hbtn.io/rltoken/FuXjfOYe18hUXCDoyMxBSg)
 
 ## Installation
 
 ### Using the git utility:
+Clone the repo in your directory structure:
 ```bash wrap
-git clone https://github.com/gogomillan/holbertonschool-higher_level_programming.git
-cd holbertonschool-higher_level_programming
-cd 0x15-javascript-web_jquery
+vagrant@ubuntu:~$ git clone https://github.com/gogomillan/holbertonschool-higher_level_programming.git
+vagrant@ubuntu:~$ cd holbertonschool-higher_level_programming
+vagrant@ubuntu:~$ cd 0x15-javascript-web_jquery
 ```
+### Using a ZIP file:
+Download it from this url: `https://github.com/gogomillan/holbertonschool-higher_level_programming/archive/master.zip`
+Uncompress the file
+Go into the `holbertonschool-higher_level_programming/0x15-javascript-web_jquery` directory
 
 ### Using the browser:
-Open the index.html file
+According to the previous steps either using git or using ZIP use then a
+browser to see the `index.html` file or each `.html` file your are interested in.
 
 ## Challenges
 
-### 0. No jQuery
+#### 0. No jQuery
 
-### 1. With jQuery
+#### 1. With jQuery
 
-### 2. Click and turn red
+#### 2. Click and turn red
 
-### 3. Add `.red` class
+#### 3. Add `.red` class
 
-### 4. Toggle classes
+#### 4. Toggle classes
 
-### 5. List of elements
+#### 5. List of elements
 
-### 6. Change the text
+#### 6. Change the text
 
-### 7. Star wars character
+#### 7. Star wars character
 
-### 8. Star Wars movies
+#### 8. Star Wars movies
 
-### 9. Say Hello!
+#### 9. Say Hello!
 
 ## Author
 Gonzalo Gomez Millan | :octocat: [GitHub](https://github.com/gogomillan)
