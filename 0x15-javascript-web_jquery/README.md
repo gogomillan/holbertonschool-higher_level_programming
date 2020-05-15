@@ -43,10 +43,13 @@ vagrant@ubuntu:~$ git clone https://github.com/gogomillan/holbertonschool-higher
 vagrant@ubuntu:~$ cd holbertonschool-higher_level_programming
 vagrant@ubuntu:~$ cd 0x15-javascript-web_jquery
 ```
+Now you can see the `index.html` file and the other `.html` files
+
 ### Using a ZIP file:
-Download it from this url: `https://github.com/gogomillan/holbertonschool-higher_level_programming/archive/master.zip`
-Uncompress the file
-Go into the `holbertonschool-higher_level_programming/0x15-javascript-web_jquery` directory
+* Download it from this url: `https://github.com/gogomillan/holbertonschool-higher_level_programming/archive/master.zip`
+* Uncompress the file
+* Go into the `holbertonschool-higher_level_programming/0x15-javascript-web_jquery` directory
+* Now you can see the `index.html` file and the other `.html` files
 
 ### Using the browser:
 According to the previous steps either using git or using ZIP use then a
