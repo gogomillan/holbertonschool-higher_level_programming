@@ -1,4 +1,4 @@
-# Javascript - Web JQuery - challenge!!
+||Javascript - Web JQuery - challenge!!
 Javascript is used for many things. At Holberton School, you will use Javascript for 2 reasons:
 - Scripting (same as we did with Python)
 - Web front-end
@@ -58,7 +58,8 @@ interested in.
 
 ## Challenges
 
-#### 0. No jQuery : Files ([0-main.html](0-main.html), [0-script.js](0-script.js))
+#### 0. No jQuery : 
+Files ([0-main.html](0-main.html), [0-script.js](0-script.js))
 
 #### 1. With jQuery
 
