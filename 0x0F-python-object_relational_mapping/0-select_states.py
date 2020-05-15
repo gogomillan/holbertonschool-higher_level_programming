@@ -2,6 +2,7 @@
 """
 Script that lists all states from the database hbtn_0e_0_usa:
 """
+import sys
 import MySQLdb
 
 
@@ -22,6 +23,7 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa"):
                  ORDER BY id ASC")
 
     query_rows = cur.fetchall()
+    print(query_rows)
     for row in query_rows:
         print(row)
 
@@ -29,8 +31,6 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa"):
     conn.close()
 
 if __name__ == "__main__":
-    import sys
-
     if len(sys.argv) < 4:
         print("Usage: {} username password database_name".format(sys.argv[0]))
         exit(1)

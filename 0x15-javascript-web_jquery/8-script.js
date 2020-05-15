@@ -10,7 +10,6 @@ $.ajax({
   success: function (data) {
     let li = '<li></li>';
     for (const movie of JSON.parse(data).results) {
-      console.log(movie.title);
       li = '<li>' + movie.title + '</li>';
       $('UL#list_movies').append(li);
     }

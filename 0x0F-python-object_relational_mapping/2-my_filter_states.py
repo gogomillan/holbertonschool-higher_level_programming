@@ -25,6 +25,7 @@ def main(db_user="root", db_passwd="root", db_name="hbtn_0e_0_usa",
             FROM   states \
             WHERE BINARY name = '{}' \
             ORDER BY id ASC".format(fltr_name)
+    print(stmt)
     cur.execute(stmt)
 
     query_rows = cur.fetchall()
