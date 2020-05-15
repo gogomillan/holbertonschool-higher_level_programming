@@ -54,7 +54,7 @@ Now you can see the `index.html` file and the other `.html` files
 ### After deploy always using the browser:
 According to the previous steps either using git or using ZIP, it is necessary
 to use then a browser to see the `index.html` file or each `.html` file you are
-interested in.
+interested in [Go to ...](index.html):
 
 ## Challenges
 
