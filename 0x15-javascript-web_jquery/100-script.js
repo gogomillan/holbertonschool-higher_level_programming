@@ -3,4 +3,6 @@
   - It is used document.querySelector to select the HTML tag
   - The script is imported from the HEAD tag, not at the end of the HTML
  */
-document.querySelector('header').style.color = '#FF0000';
+document.addEventListener('DOMContentLoaded', function (event) {
+  document.querySelector('header').style.color = '#FF0000';
+});
